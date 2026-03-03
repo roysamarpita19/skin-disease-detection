@@ -1,0 +1,168 @@
+/* ===== GENERAL ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.4s;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: linear-gradient(135deg, #000000, #1c1c1c, #2a2a2a);
+    color: white;
+}
+
+/* ===== CONTAINER CARD ===== */
+.container {
+    width: 90%;
+    max-width: 750px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #00c6ff;
+}
+
+p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ===== FORM ===== */
+form {
+    margin-top: 25px;
+}
+
+/* File input */
+input[type="file"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+/* Button */
+button {
+    padding: 12px 28px;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 242, 254, 0.4);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 242, 254, 0.6);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* ===== IMAGE PREVIEW ===== */
+.preview img {
+    margin-top: 20px;
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== RESULT CARD ===== */
+.result-card {
+    margin-top: 35px;
+    padding: 25px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.dark-mode .result-card {
+    background: rgba(40,40,40,0.9);
+}
+
+.result-card h2 {
+    text-align: center;
+    color: #0072ff;
+}
+
+.result-card h3 {
+    margin-top: 15px;
+    color: #333;
+}
+
+.dark-mode .result-card h3 {
+    color: white;
+}
+
+/* ===== TOGGLE BUTTON ===== */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+
+.theme-toggle button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    padding: 0;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.theme-toggle button:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* ===== SUBTITLE ===== */
+.subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* ===== HIDE DEFAULT FILE INPUT ===== */
+input[type="file"] {
+    display: none;
+}
+
+/* ===== CUSTOM FILE UPLOAD BUTTON ===== */
+.custom-file-upload {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(56, 249, 215, 0.4);
+    margin-bottom: 15px;
+}
+
+.custom-file-upload:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(56, 249, 215, 0.6);
+}

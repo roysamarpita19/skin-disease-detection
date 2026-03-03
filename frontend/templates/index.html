@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Dermatology Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="theme-toggle">
+    <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+</div>
+
+<div class="container">
+    <h1>🩺 AI Skin Disease Detection System</h1>
+    <p class="subtitle">
+    🧬 Advanced AI-powered dermatology analysis.<br>
+    Securely upload a clinical image to receive instant skin condition insights.
+</p>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="file-upload" class="custom-file-upload">
+    📤 Upload Skin Image
+</label>
+<input id="file-upload" type="file" name="image" required onchange="previewImage(event)">
+        <button type="submit">🔍 Analyze</button>
+    </form>
+
+    <div class="preview">
+        <img id="preview" src="#" alt="Image Preview" style="display:none;">
+    </div>
+
+    {% if result %}
+    <div class="result-card">
+        <h2>📋 Prediction Result</h2>
+        <h3>🧾 Disease: {{ result.name }}</h3>
+        <p><strong>📝 Details:</strong> {{ result.details }}</p>
+        <p><strong>⚠ Root Cause:</strong> {{ result.cause }}</p>
+    </div>
+    {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
